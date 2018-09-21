@@ -1,26 +1,27 @@
 require 'pry'#
 class Anagram
 
+  attr_accessor :word
 
-
-  attr_accessor :diaper
-
-  def initialize(diaper)
-    @diaper = diaper
-
+  def initialize(word)
+     @word = word
   end
 
-  def match(array)
-    array = []
-    array.detect.sort
 
-    chars = array.split("")
-    chars[2] = chars.length
-    array(ba).each do |char|
-
-  end
+  def match(possible_anagrams)
+    possible_anagrams.select do |possible_anagram|
+      @word.split("").sort == possible_anagram.split("").sort
+      
+     end
   end
 end
+
+
+
+  # array.split("")
+  # array.each do |char|
+  #
+  # end
 
 
   # def match(ba)
